@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:besc g2-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -4310,7 +4309,7 @@ $EndComp
 Text Notes 2950 3100 0    50   ~ 0
 DT=10xR\nns / kOhm
 Text Notes 7000 4050 0    50   ~ 0
-Refference is 3.3V / 2
+Reference is 3.3V / 2
 Text Notes 8350 3200 0    50   ~ 0
 Ferrite bead for HF filtering
 Text Notes 5350 1050 0    50   ~ 0
@@ -4338,7 +4337,7 @@ Wire Notes Line
 Wire Notes Line
 	1250 1550 1250 2000
 Text Notes 6050 4350 0    50   ~ 0
-Analog ground is kept sepparate
+Analog ground is kept separate
 Wire Notes Line
 	6550 4250 6550 4150
 Wire Notes Line

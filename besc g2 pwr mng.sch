@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:besc g2-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 5
+Sheet 3 5
 Title "BESC Gen 2"
 Date "14.7.2019"
 Rev "init"
@@ -130,19 +129,6 @@ Wire Wire Line
 Wire Wire Line
 	5000 1600 5000 1550
 $Comp
-L besc-g2-rescue:LP5907MFX-3.3-Regulator_Linear-besc-g2-rescue U12
-U 1 1 5DBF5F54
-P 6250 1750
-AR Path="/5DBF5F54" Ref="U12"  Part="1" 
-AR Path="/5DBE359C/5DBF5F54" Ref="U12"  Part="1" 
-F 0 "U12" H 6250 2117 50  0000 C CNN
-F 1 "LP5907MFX-3.3" H 6250 2026 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6250 2100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lp5907.pdf" H 6250 2250 50  0001 C CNN
-	1    6250 1750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C103
 U 1 1 5DBF66B9
 P 5600 1800
@@ -211,8 +197,6 @@ $EndComp
 Wire Wire Line
 	5600 1900 5600 1950
 Wire Wire Line
-	6550 1650 6600 1650
-Wire Wire Line
 	7100 1650 7100 1700
 Wire Wire Line
 	6750 1700 6750 1650
@@ -280,23 +264,19 @@ F 3 "~" H 7950 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8150 1600 8400 1600
-Wire Wire Line
-	8150 1900 8400 1900
-Wire Wire Line
-	8150 1700 8150 1900
 $Comp
 L power:GND #PWR0162
 U 1 1 5DC0C402
-P 8400 1950
-F 0 "#PWR0162" H 8400 1700 50  0001 C CNN
-F 1 "GND" H 8405 1777 50  0000 C CNN
-F 2 "" H 8400 1950 50  0001 C CNN
-F 3 "" H 8400 1950 50  0001 C CNN
-	1    8400 1950
+P 8400 1750
+F 0 "#PWR0162" H 8400 1500 50  0001 C CNN
+F 1 "GND" H 8405 1577 50  0000 C CNN
+F 2 "" H 8400 1750 50  0001 C CNN
+F 3 "" H 8400 1750 50  0001 C CNN
+	1    8400 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8400 1900 8400 1950
+	8400 1700 8400 1750
 $Comp
 L power:+12V #PWR0161
 U 1 1 5DC0D64E
@@ -1280,9 +1260,11 @@ F 3 "~" H 5950 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L besc-g2-rescue:LTC7801-moje IC1
+L besc-g2-rescue:LTC7801-moje-besc-g2-rescue IC1
 U 1 1 5CDAFA6C
 P 4500 4850
+AR Path="/5CDAFA6C" Ref="IC1"  Part="1" 
+AR Path="/5DBE359C/5CDAFA6C" Ref="IC1"  Part="1" 
 F 0 "IC1" H 4475 6165 50  0000 C CNN
 F 1 "LTC7801" H 4475 6074 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-24-1EP_4x5mm_P0.5mm_EP2.65x3.65mm" H 4250 6050 20  0001 C CNN
@@ -1431,17 +1413,6 @@ F 3 "https://www.recom-power.com/pdf/Innoline/R-78Exx-0.5.pdf" H 4550 1600 50  0
 $EndComp
 Wire Wire Line
 	3900 1600 4250 1600
-Wire Wire Line
-	6250 2050 6250 2150
-Wire Wire Line
-	6350 2100 6350 2050
-Connection ~ 6600 1650
-Wire Wire Line
-	6600 1650 6750 1650
-Wire Wire Line
-	6600 2100 6600 1650
-Wire Wire Line
-	6350 2100 6600 2100
 $Comp
 L Device:C_Small C102
 U 1 1 5CDAF866
@@ -1500,4 +1471,30 @@ Wire Wire Line
 Connection ~ 1600 4300
 Wire Wire Line
 	1600 4300 1600 4350
+Wire Wire Line
+	6550 1650 6750 1650
+$Comp
+L besc-g2-rescue:LP5907MFX-3.3-Regulator_Linear-besc-g2-rescue-besc-g2-rescue U12
+U 1 1 5DBF5F54
+P 6250 1750
+AR Path="/5DBF5F54" Ref="U12"  Part="1" 
+AR Path="/5DBE359C/5DBF5F54" Ref="U12"  Part="1" 
+F 0 "U12" H 6250 2117 50  0000 C CNN
+F 1 "LP5907MFX-3.3" H 6250 2026 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6250 2100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp5907.pdf" H 6250 2250 50  0001 C CNN
+	1    6250 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2050 6250 2100
+Wire Wire Line
+	6250 2100 6350 2100
+Wire Wire Line
+	6350 2100 6350 2050
+Connection ~ 6250 2100
+Wire Wire Line
+	6250 2100 6250 2150
+Wire Wire Line
+	8400 1700 8150 1700
 $EndSCHEMATC
